@@ -9,12 +9,24 @@
 /* Begin PBXBuildFile section */
 		76ED68AA29CD8067000252B7 /* HeartBLE.docc in Sources */ = {isa = PBXBuildFile; fileRef = 76ED68A929CD8067000252B7 /* HeartBLE.docc */; };
 		76ED68AB29CD8067000252B7 /* HeartBLE.h in Headers */ = {isa = PBXBuildFile; fileRef = 76ED68A829CD8067000252B7 /* HeartBLE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76ED68B929CD8159000252B7 /* HeartBLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 76ED68B729CD8159000252B7 /* HeartBLEDevice.m */; };
+		76ED68BA29CD8159000252B7 /* HeartBLEDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 76ED68B829CD8159000252B7 /* HeartBLEDevice.h */; };
+		76ED68C029CD8191000252B7 /* HeartBLEManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 76ED68BE29CD8191000252B7 /* HeartBLEManager.h */; };
+		76ED68C129CD8191000252B7 /* HeartBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76ED68BF29CD8191000252B7 /* HeartBLEManager.m */; };
+		76ED68C529CD81B2000252B7 /* HeartBLEDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 76ED68C329CD81B2000252B7 /* HeartBLEDriver.h */; };
+		76ED68C629CD81B2000252B7 /* HeartBLEDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 76ED68C429CD81B2000252B7 /* HeartBLEDriver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		76ED68A529CD8067000252B7 /* HeartBLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeartBLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ED68A829CD8067000252B7 /* HeartBLE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartBLE.h; sourceTree = "<group>"; };
 		76ED68A929CD8067000252B7 /* HeartBLE.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HeartBLE.docc; sourceTree = "<group>"; };
+		76ED68B729CD8159000252B7 /* HeartBLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartBLEDevice.m; sourceTree = "<group>"; };
+		76ED68B829CD8159000252B7 /* HeartBLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartBLEDevice.h; sourceTree = "<group>"; };
+		76ED68BE29CD8191000252B7 /* HeartBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeartBLEManager.h; path = CL837Library/HeartBLEManager.h; sourceTree = "<group>"; };
+		76ED68BF29CD8191000252B7 /* HeartBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeartBLEManager.m; path = CL837Library/HeartBLEManager.m; sourceTree = "<group>"; };
+		76ED68C329CD81B2000252B7 /* HeartBLEDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartBLEDriver.h; sourceTree = "<group>"; };
+		76ED68C429CD81B2000252B7 /* HeartBLEDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartBLEDriver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,10 +59,40 @@
 		76ED68A729CD8067000252B7 /* HeartBLE */ = {
 			isa = PBXGroup;
 			children = (
+				76ED68C229CD8196000252B7 /* Driver */,
+				76ED68BB29CD8161000252B7 /* Manager */,
+				76ED68B629CD812B000252B7 /* Device */,
 				76ED68A829CD8067000252B7 /* HeartBLE.h */,
 				76ED68A929CD8067000252B7 /* HeartBLE.docc */,
 			);
 			path = HeartBLE;
+			sourceTree = "<group>";
+		};
+		76ED68B629CD812B000252B7 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				76ED68B829CD8159000252B7 /* HeartBLEDevice.h */,
+				76ED68B729CD8159000252B7 /* HeartBLEDevice.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		76ED68BB29CD8161000252B7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				76ED68BE29CD8191000252B7 /* HeartBLEManager.h */,
+				76ED68BF29CD8191000252B7 /* HeartBLEManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		76ED68C229CD8196000252B7 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				76ED68C329CD81B2000252B7 /* HeartBLEDriver.h */,
+				76ED68C429CD81B2000252B7 /* HeartBLEDriver.m */,
+			);
+			path = Driver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -61,6 +103,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76ED68AB29CD8067000252B7 /* HeartBLE.h in Headers */,
+				76ED68C529CD81B2000252B7 /* HeartBLEDriver.h in Headers */,
+				76ED68BA29CD8159000252B7 /* HeartBLEDevice.h in Headers */,
+				76ED68C029CD8191000252B7 /* HeartBLEManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ED68B929CD8159000252B7 /* HeartBLEDevice.m in Sources */,
 				76ED68AA29CD8067000252B7 /* HeartBLE.docc in Sources */,
+				76ED68C629CD81B2000252B7 /* HeartBLEDriver.m in Sources */,
+				76ED68C129CD8191000252B7 /* HeartBLEManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,13 +6,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-//! Project version number for HeartBLE.
-FOUNDATION_EXPORT double HeartBLEVersionNumber;
+@interface HeartBLEDevice : NSObject
 
-//! Project version string for HeartBLE.
-FOUNDATION_EXPORT const unsigned char HeartBLEVersionString[];
+@property (nonatomic, strong) CBPeripheral *peripheral;
+@property (nonatomic, strong) CBCharacteristic *characteristic;
 
-// In this header, you should import all the public headers of your framework using statements like #import <HeartBLE/PublicHeader.h>
+- (instancetype)initWithPeripheral:(CBPeripheral *)peripheral andCharacteristic:(CBCharacteristic *)characteristic;
+- (void)connect;
+- (void)disconnect;
+- (void)startGetHRWithMode:(NSString *)mode;
+- (void)stopGetHR;
+- (void)startGetRRWithMode:(NSString *)mode;
+- (void)stopGetRR;
+- (void)getHisHRWithUTC:(NSString *)UTC;
+- (void)getHisRRWithUTC:(NSString *)UTC;
+- (void)getUTCWithHR:(NSString *)HR andRR:(NSString *)RR;
+- (void)getAll7dayData;
+- (void)get7dayDataWithUTC:(NSString *)UTC;
+- (void)getTimStepDataWithUTC:(NSString *)UTC andStep:(int)step;
+- (void)getSingleTimDataWithUTC:(NSString *)UTC;
+- (void)writeData:(NSData *)data;
 
-
+@end
